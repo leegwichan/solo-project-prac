@@ -1,5 +1,6 @@
 package com.example.projectPrac.v1.user.controller;
 
+import com.example.projectPrac.v1.companyLocation.entity.Location;
 import com.example.projectPrac.v1.dto.MultiResponseDto;
 import com.example.projectPrac.v1.user.dto.UserDto;
 import com.example.projectPrac.v1.user.entity.User;
@@ -35,13 +36,14 @@ public class UserController {
     @GetMapping("/search")
     public ResponseEntity getUsersByCondition(@Positive @RequestParam int page,
                                               @Positive @RequestParam int size,
-                                              @RequestParam String country,
-                                              @RequestParam String class1,
-                                              @RequestParam String class2,
-                                              @RequestParam String type){
+                                              @RequestParam(required = false) String country,
+                                              @RequestParam(required = false) String class1,
+                                              @RequestParam(required = false) String class2,
+                                              @RequestParam(required = false) String type){
         String[] location = new String[]{country, class1, class2};
-        Page<User> users = userService.findUsersByCondition(page-1, size, location, type);
-        List<UserDto.Response> data = mapper.usersToUsersResponseDtos(users.getContent());
-        return new ResponseEntity(new MultiResponseDto<>(data, users), HttpStatus.OK);
+        Page<User> pageUsers = userService.findUsersByCondition(page-1, size, location, type);
+        System.out.println(pageUsers);
+        List<UserDto.Response> data = mapper.usersToUsersResponseDtos(pageUsers.getContent());
+        return new ResponseEntity(new MultiResponseDto<>(data, pageUsers), HttpStatus.OK);
     }
 }

@@ -3,7 +3,9 @@ package com.example.projectPrac.v1.user.entity;
 import com.example.projectPrac.v1.audit.Auditable;
 import com.example.projectPrac.v1.companyLocation.entity.Location;
 import com.example.projectPrac.v1.companyType.entity.CompanyType;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -11,6 +13,8 @@ import javax.persistence.*;
 @Entity(name = "MEMBER")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class User extends Auditable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

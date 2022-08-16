@@ -1,5 +1,6 @@
 package com.example.projectPrac.v1.user.service;
 
+import com.example.projectPrac.v1.companyLocation.entity.Location;
 import com.example.projectPrac.v1.user.entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;

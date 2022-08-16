@@ -1,0 +1,44 @@
+= solo-project-prac
+:sectnums:
+:toc: left
+:toclevels: 4
+:toc-title: Table of Contents
+:source-highlighter: prettify
+
+이충안
+
+v1.0.0, 2022.08.16 ~ 17
+
+***
+
+=== 다수 회원 정보 조회
+.curl-request
+include::{snippets}/get-users/curl-request.adoc[]
+
+.http-request
+include::{snippets}/get-users/http-request.adoc[]
+
+.request-parameters
+include::{snippets}/get-users/request-parameters.adoc[]
+
+.http-response
+include::{snippets}/get-users/http-response.adoc[]
+
+.response-fields
+include::{snippets}/get-users/response-fields.adoc[]
+
+=== 다수 회원 정보 검색 조회
+.curl-request
+include::{snippets}/get-users-search/curl-request.adoc[]
+
+.http-request
+include::{snippets}/get-users-search/http-request.adoc[]
+
+.request-parameters
+include::{snippets}/get-users-search/request-parameters.adoc[]
+
+.http-response
+include::{snippets}/get-users-search/http-response.adoc[]
+
+.response-fields
+include::{snippets}/get-users-search/response-fields.adoc[]
