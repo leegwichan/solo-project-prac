@@ -1,0 +1,27 @@
+spring:
+  h2:
+    console:
+      enabled: true # h2 console ??
+      path: /h2 # h2 console ?? ??
+  datasource:
+    url: jdbc:h2:mem:test # source ?? ??? ??
+  jpa:
+    hibernate:
+      ddl-auto: create  # (1) ??? ?? ??
+    show-sql: true      # (2) SQL ?? ??
+    properties:
+      hibernate:
+        format_sql: true  # (3) SQL pretty print
+  sql:
+    init:
+      data-locations: classpath*:db/h2/data.sql
+logging:
+  level:
+    org:
+      springframework:
+        orm:
+          jpa: DEBUG
+server:
+  servlet:
+    encoding:
+      force-response: true
