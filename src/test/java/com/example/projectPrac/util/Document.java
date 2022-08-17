@@ -24,6 +24,14 @@ public interface Document {
                 responseFields(responseFields));
     }
 
+    static RestDocumentationResultHandler getMethodDocument(String identifier,
+                                                            List<FieldDescriptor> responseFields){
+        return document(identifier,
+                ApiDocumentUtils.getRequestPreProcessor(),
+                ApiDocumentUtils.getResponsePreProcessor(),
+                responseFields(responseFields));
+    }
+
     static ParameterDescriptor queryParam(String name, String description){
         return parameterWithName(name).description(description);
     }
