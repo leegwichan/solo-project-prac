@@ -1,7 +1,7 @@
 ---
 name: Todo List
 about: 할 일들 정리
-title: ''
+title: "[TODO]"
 labels: ''
 assignees: ''
 
