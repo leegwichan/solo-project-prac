@@ -10,9 +10,9 @@
 v1.0.0, 2022.08.16 ~ 17
 
 ***
-
-== 다수 회원 정보 조회
-=== 200 OK
+== User
+=== 다수 회원 정보 조회
+==== 200 OK
 .http-request
 include::{snippets}/get-users/http-request.adoc[]
 
@@ -25,7 +25,7 @@ include::{snippets}/get-users/http-response.adoc[]
 .response-fields
 include::{snippets}/get-users/response-fields.adoc[]
 
-=== 400 MISS QUERY PARAMETER
+==== 400 MISS QUERY PARAMETER
 .http-request
 include::{snippets}/get-users-error/http-request.adoc[]
 
@@ -35,7 +35,7 @@ include::{snippets}/get-users-error/http-response.adoc[]
 .response-fields
 include::{snippets}/get-users-error/response-fields.adoc[]
 
-=== 404 NOT FOUND
+==== 404 NOT FOUND
 .http-request
 include::{snippets}/get-user-notFound/http-request.adoc[]
 
@@ -45,8 +45,8 @@ include::{snippets}/get-user-notFound/http-response.adoc[]
 .response-fields
 include::{snippets}/get-user-notFound/response-fields.adoc[]
 
-== 다수 회원 정보 검색 조회
-=== 200 OK
+=== 다수 회원 정보 검색 조회
+==== 200 OK
 .http-request
 include::{snippets}/get-users-search/http-request.adoc[]
 
@@ -59,7 +59,7 @@ include::{snippets}/get-users-search/http-response.adoc[]
 .response-fields
 include::{snippets}/get-users-search/response-fields.adoc[]
 
-=== 400 ERROR
+==== 400 MISS QUERY PARAMETER
 .http-request
 include::{snippets}/get-users-search-error/http-request.adoc[]
 
@@ -69,7 +69,7 @@ include::{snippets}/get-users-search-error/http-response.adoc[]
 .response-fields
 include::{snippets}/get-users-search-error/response-fields.adoc[]
 
-=== 404 NOT FOUND
+==== 404 NOT FOUND
 .http-request
 include::{snippets}/get-users-search-notFound/http-request.adoc[]
 
